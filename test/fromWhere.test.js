@@ -1,9 +1,12 @@
 describe('fromWhere' , function(){
-    it('should return the town the regNum of where is the car from.' , function(){
-  assert.equal(fromWhere('Bellville'), 'CY');
+    it('if the regNum starts with CY should return Bellville' , function(){
+  assert.equal(fromWhere('CY') , 'Bellville');
 });
 
-  it('should return the town the regNum of where is the car from.' , function(){
-assert.equal(fromWhere('CA854'), false);
+ it('if the regNum starts with CJ should return Paarl' , function(){
+assert.equal(fromWhere('CJ'), 'Paarl');
+});
+it('if the regNum starts with CA should return Cape Town' , function(){
+assert.equal(fromWhere('CA'), 'Cape Town');
 });
 });
