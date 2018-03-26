@@ -1,13 +1,13 @@
-function countAllFromTown(regNum){
+function countAllFromTown(regNum, loc){
   console.log(regNum);
   var number =regNum.split(',');
-   var paarl=[];
+   var Town=[];
   for (var i=0;i<number.length;i++){
-    if (number[i].startsWith('CL')){
-    paarl.push(number);
+    if (number[i].startsWith(loc)){
+    Town.push(number);
 
     }
   }
-  return paarl.length;
+  return Town.length;
 
 }
